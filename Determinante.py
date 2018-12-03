@@ -44,6 +44,9 @@ def determinante(m):
     for cont in range(len(soma)):
         det += soma[cont]
     return det
-x = [[4,2],[1,1]]
+x = [[1,1,0],[0,1,1],[1,0,2]]
 det = determinante (x)
-print ('determinante = ',det)
+if det == 0:
+    print ('Não existe matriz inversa')
+else:
+    print ('determinante = ',det)
