@@ -75,15 +75,6 @@ def matrizinv(x,det): #Faz inversão das matrizes com base no determinante
             if calc == -0: calc = 0 #Corrige sinal negativo no zero
             linha.append(calc)
         madj.append(linha)
-    #Inversa da matriz XtX (inversão por matriz adjunta)
-    #det=XtX[0][0]*XtX[1][1]-XtX[0][1]*XtX[1][0]
-    #inv=[[0,0],[0,0]]
-    #inv[0][0]=XtX[1][1]/det
-    #inv[1][1]=XtX[0][0]/det
-    #inv[0][1]=-XtX[1][0]/det
-    #inv[1][0]=-XtX[0][1]/det
-    #Encontrando ângulo Beta
-    #beta=[0,0]
     return(madj)
 x = [[3,0,2],[2,0,-2],[0,1,1]]
 det = determinante (x)
