@@ -1,3 +1,43 @@
+def determinante(m):
+    #Módulo para obtenção de determinante de matriz 2x2 ou 3x3
+    #det2x2=+x[0][0]*x[1][1]
+    #       -x[0][1]*x[1][0]
+    #det3x3=+x[0][0]*x[1][1]*x[2][2]
+    #       +x[0][1]*x[1][2]*x[2][0]
+    #       +x[0][2]*x[1][0]*x[2][1]
+    #       -x[0][2]*x[1][1]*x[2][0]
+    #       -x[0][1]*x[1][0]*x[2][2]
+    #       -x[0][0]*x[1][2]*x[2][1]
+    # Definindo as variáveis
+    a = 0
+    b = 0
+    c = len(x)-1
+    mult1 = 1
+    mult2 = 1
+    loop = 0
+    det = 0
+    soma = []
+    if len(x) == 2: d = len(x)-1 #Matriz 2x2
+    if len(x) == 3: d = len(x)-2 #Matriz 3x3
+    while loop == 0:
+        mult1 = mult1*x[a][b]
+        mult2 = mult2*x[a][c]
+        if a == len(x)-1 and b == d: loop = 1
+        a = a+1
+        b = b+1
+        c = c-1
+        if a > len(x)-1:
+            a = 0
+            soma.append(mult1-mult2)
+            # print (mult1,-mult2) #Apresenta os valores obtidos pela Regra de Sarrus
+            mult1 = 1
+            mult2 = 1
+            b = len(soma)
+            c = len(x)-len(soma)-1
+        if b > len(x)-1: b = 0
+        if c < 0: c = len(x)-1
+    for cont in range(len(soma)): det += soma[cont]
+    return det
 def matrizinv(x,det): #Faz inversão das matrizes com base no determinante
     #Definindo variáveis
     xt = []
@@ -19,28 +59,20 @@ def matrizinv(x,det): #Faz inversão das matrizes com base no determinante
     #madj[2][1]=xt[0][0]*xt[1][2]-xt[0][2]*xt[1][0]
     #madj[2][2]=xt[0][0]*xt[1][1]-xt[0][1]*xt[1][0]
     for i in range(len(x)):
-        if i == 0:
-            a = 1
-        else:
-            a = 0
-        if i == 2:
-            b = 1
-        else:
-            b = 2
+        if i == 0: a = 1
+        else: a = 0
+        if i == 2: b = 1
+        else: b = 2
         linha = []
         for j in range(len(x)):
-            if j == 0:
-                c = 1
-            else:
-                c = 0
-            if j == 2:
-                d = 1
-            else:
-                d = 2
-            if (i+j)%2 == 0:
-                calc = (x[a][c]*x[b][d]-x[a][d]*x[b][c])/int(det)
-            else:
-                calc = -(x[a][c]*x[b][d]-x[a][d]*x[b][c])/int(det)
+            if j == 0: c = 1
+            else: c = 0
+            if j == 2: d = 1
+            else: d = 2
+            #Adiciona os sinais conforme posição na matriz
+            if (i+j)%2 == 0: calc = (xt[a][c]*xt[b][d]-xt[a][d]*xt[b][c])/int(det)
+            else: calc = -(xt[a][c]*xt[b][d]-xt[a][d]*xt[b][c])/int(det)
+            if calc == -0: calc = 0 #Corrige sinal negativo no zero
             linha.append(calc)
         madj.append(linha)
     #Inversa da matriz XtX (inversão por matriz adjunta)
@@ -53,12 +85,9 @@ def matrizinv(x,det): #Faz inversão das matrizes com base no determinante
     #Encontrando ângulo Beta
     #beta=[0,0]
     return(madj)
-x = [[1,1,0],[0,1,1],[1,0,2]]
-inv = matrizinv(x,'3')
+x = [[3,0,2],[2,0,-2],[0,1,1]]
+det = determinante (x)
+if det == 0: print ('Não existe matriz inversa')
+else: print ('Matriz inversa possível, determinante = ',det)
+inv = matrizinv(x,det)
 print (inv)
-from numpy import matrix
-from numpy import linalg
-A = matrix (x)
-print (A.T)
-print (A*x)
-print (A.I) 

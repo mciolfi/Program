@@ -1,0 +1,1 @@
+Instalar Numpy = http://pyscience-brasil.wikidot.com/install:como-instalar-o-numpy

@@ -49,4 +49,4 @@ det = determinante (x)
 if det == 0:
     print ('Não existe matriz inversa')
 else:
-    print ('determinante = ',det)
+    print ('Matriz inversa possível, determinante = ',det)
