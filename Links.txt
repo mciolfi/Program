@@ -1,1 +1,3 @@
-Instalar Numpy = http://pyscience-brasil.wikidot.com/install:como-instalar-o-numpy
+Guide Numpy = http://pyscience-brasil.wikidot.com/install:como-instalar-o-numpy
+Numpy python -m pip install --user numpy
+Keras python -m pip install --user keras
