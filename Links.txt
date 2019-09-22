@@ -1,5 +1,7 @@
-Data-Set: https://archive.ics.uci.edu/ml/index.php
+https://www.python.org/downloads/windows/
 https://code.visualstudio.com/
+
+Data-Set: https://archive.ics.uci.edu/ml/index.php
 # Instaliation
 Guide Numpy = http://pyscience-brasil.wikidot.com/install:como-instalar-o-numpy
 Numpy python -m pip install --user numpy
