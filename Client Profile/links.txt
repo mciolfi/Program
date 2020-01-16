@@ -1,3 +1,5 @@
 https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/
 https://www.tensorflow.org/tutorials/keras/classification?hl=pt-br
 https://www.dobitaobyte.com.br/rede-neural-com-keras-mais-anotacoes/
+Course https://campus.datacamp.com/courses/deep-learning-in-python/basics-of-deep-learning-and-neural-networks?ex=1
+ReLu (Rectified Linear Activation) if x<0 = 0; if x>=0 = x
