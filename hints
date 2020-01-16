@@ -1,2 +1,3 @@
 print(1, 2, 3, sep=' < ')
 max(100, 51, 14, key=mod_5) # Call function mod_5
+ReLu: output = max(input, 0)
