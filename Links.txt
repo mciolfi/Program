@@ -1,6 +1,8 @@
 https://www.python.org/downloads/windows/
 https://code.visualstudio.com/
 
+Curso DataCamp: https://campus.datacamp.com/courses/deep-learning-in-python/basics-of-deep-learning-and-neural-networks?ex=1
+
 Data-Set: https://archive.ics.uci.edu/ml/index.php
 # Instaliation
 Guide Numpy = http://pyscience-brasil.wikidot.com/install:como-instalar-o-numpy
