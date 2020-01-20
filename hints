@@ -1,3 +1,46 @@
 print(1, 2, 3, sep=' < ')
 max(100, 51, 14, key=mod_5) # Call function mod_5
 ReLu: output = max(input, 0)
+node_0_0_input = (input_data * weights['node_0_0']).sum()
+t = pd.DataFrame({'bucket': ['a', 'a', 'b', 'b', 'b'], 'weight': [2, 3, 1, 4, 3],
+                  'qty':[100, 500, 200, 800, 700], 'risk': [10, 20, 12, 60, 58]})
+X = array[:,0:8]
+Y = array[:,8]
+
+import numpy as np
+input_data = np.array([2,3])
+weights = {'node_0': np.array([1, 1]),
+           'node_1': np.array([-1, 1]),
+           'output': np.array([2, -1])}
+node_0_value = (input_data * weights['node_0']).sum()
+node_1_value = (input_data * weights['node_1']).sum()
+
+
+
+# Python version
+2 import sys
+3 print('Python: {}'.format(sys.version))
+4 # scipy
+5 import scipy
+6 print('scipy: {}'.format(scipy.__version__))
+7 # numpy
+8 import numpy
+9 print('numpy: {}'.format(numpy.__version__))
+10 # matplotlib
+11 import matplotlib
+12 print('matplotlib: {}'.format(matplotlib.__version__))
+13 # pandas
+14 import pandas
+15 print('pandas: {}'.format(pandas.__version__))
+16 # scikit-learn
+17 import sklearn
+18 print('sklearn: {}'.format(sklearn.__version__))
+
+# Load CSV using Pandas from URL
+2 from pandas import read_csv
+3 url = 'https://goo.gl/bDdBiA'
+4 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+5 data = read_csv(url, names=names)
+description = data.describe()
+6 print(data.shape)
+7 print(description)
